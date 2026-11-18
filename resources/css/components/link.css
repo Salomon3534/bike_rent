@@ -1,0 +1,28 @@
+/* Enlaces de texto: .link + modificador */
+.link {
+    text-decoration: underline;
+}
+
+/* Enlace discreto y pequeño (auth, perfil) */
+.link--muted {
+    font-size: var(--font-size-sm);
+    border-radius: var(--radius-md);
+    color: var(--color-text-muted);
+}
+
+.link--muted:hover {
+    color: var(--color-text);
+}
+
+.link--muted:focus {
+    outline: none;
+}
+
+.link--muted:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--color-focus);
+}
+
+/* Enlace de acción principal */
+.link--accent {
+    color: var(--color-accent);
+}

@@ -1,0 +1,138 @@
+/* Modal de confirmación */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: var(--space-6) var(--space-4);
+}
+
+.modal__backdrop {
+    position: fixed;
+    inset: 0;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-bg-overlay);
+    opacity: 0.75;
+}
+
+.modal__panel {
+    position: relative;
+    margin-bottom: var(--space-6);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-surface);
+    box-shadow: var(--shadow-xl);
+}
+
+.modal__content {
+    padding: var(--space-6);
+}
+
+.modal__title {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.modal__text {
+    margin-top: var(--space-1);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.modal__field {
+    margin-top: var(--space-6);
+}
+
+.modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .modal {
+        padding-inline: 0;
+    }
+
+    .modal__panel {
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .modal__panel--sm {
+        max-width: 24rem;
+    }
+
+    .modal__panel--md {
+        max-width: 28rem;
+    }
+
+    .modal__panel--lg {
+        max-width: 32rem;
+    }
+
+    .modal__panel--xl {
+        max-width: 36rem;
+    }
+
+    .modal__panel--2xl {
+        max-width: 42rem;
+    }
+}
+
+/* Clases de transición de Alpine (x-transition:*) */
+.modal-fade-enter {
+    transition: opacity 300ms ease-out;
+}
+
+.modal-fade-leave {
+    transition: opacity 200ms ease-in;
+}
+
+.modal-fade-enter-start,
+.modal-fade-leave-end {
+    opacity: 0;
+}
+
+.modal-fade-enter-end,
+.modal-fade-leave-start {
+    opacity: 1;
+}
+
+.modal-pop-enter {
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.modal-pop-leave {
+    transition: opacity 200ms ease-in, transform 200ms ease-in;
+}
+
+.modal-pop-enter-start,
+.modal-pop-leave-end {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+.modal-pop-enter-end,
+.modal-pop-leave-start {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (min-width: 640px) {
+    .modal-pop-enter-start,
+    .modal-pop-leave-end {
+        transform: scale(0.95);
+    }
+
+    .modal-pop-enter-end,
+    .modal-pop-leave-start {
+        transform: scale(1);
+    }
+}

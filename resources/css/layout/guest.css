@@ -1,0 +1,37 @@
+/* Layout de invitados (login, registro, recuperación de contraseña) */
+.guest {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--space-6);
+    background-color: var(--color-bg-page);
+}
+
+.guest__logo-icon {
+    width: 5rem;
+    height: 5rem;
+    fill: currentColor;
+    color: var(--gray-500);
+}
+
+.guest__card {
+    width: 100%;
+    margin-top: var(--space-6);
+    padding: var(--space-4) var(--space-6);
+    overflow: hidden;
+    background-color: var(--color-bg-surface);
+    box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 640px) {
+    .guest {
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .guest__card {
+        max-width: 28rem;
+        border-radius: var(--radius-lg);
+    }
+}

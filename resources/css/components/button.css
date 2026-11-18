@@ -1,0 +1,72 @@
+/* Botones: .btn + modificador de variante */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color var(--duration) var(--ease), background-color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--color-focus);
+}
+
+.btn--primary {
+    color: var(--color-button-primary-text);
+    background-color: var(--color-button-primary-bg);
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+    background-color: var(--color-button-primary-hover);
+}
+
+.btn--primary:active {
+    background-color: var(--color-button-primary-active);
+}
+
+.btn--secondary {
+    color: var(--color-button-secondary-text);
+    background-color: var(--color-button-secondary-bg);
+    border-color: var(--color-border-button);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-button-secondary-hover);
+}
+
+.btn--secondary:focus-visible {
+    box-shadow: var(--shadow-sm), 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--color-focus);
+}
+
+.btn--secondary:disabled {
+    opacity: 0.25;
+}
+
+.btn--danger {
+    color: #ffffff;
+    background-color: var(--red-600);
+}
+
+.btn--danger:hover {
+    background-color: var(--red-500);
+}
+
+.btn--danger:active {
+    background-color: var(--red-700);
+}
+
+.btn--danger:focus-visible {
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--red-500);
+}

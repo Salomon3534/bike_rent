@@ -1,0 +1,33 @@
+/* Alertas (mensajes flash) y mensajes de estado */
+.alert {
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+}
+
+.alert--success {
+    color: var(--color-alert-success-text);
+    background-color: var(--color-alert-success-bg);
+}
+
+.alert--error {
+    color: var(--color-alert-error-text);
+    background-color: var(--color-alert-error-bg);
+}
+
+.alert + .alert {
+    margin-top: var(--space-4);
+}
+
+.status {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.status--success {
+    color: var(--color-success-text);
+}
+
+.status--hint {
+    color: var(--color-text-muted);
+    font-weight: 400;
+}

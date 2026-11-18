@@ -1,0 +1,38 @@
+/* Página de perfil */
+.profile > * + * {
+    margin-top: var(--space-6);
+}
+
+.profile__panel {
+    max-width: var(--width-narrow);
+}
+
+.profile__panel--stacked > * + * {
+    margin-top: var(--space-6);
+}
+
+.profile__title {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.profile__description {
+    margin-top: var(--space-1);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.profile__form {
+    margin-top: var(--space-6);
+}
+
+.profile__hint {
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-heading);
+}
+
+.profile__status {
+    margin-top: var(--space-2);
+}

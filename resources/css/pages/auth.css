@@ -1,0 +1,17 @@
+/* Páginas de autenticación (login, registro, recuperación, verificación) */
+.auth__intro {
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.auth__status {
+    margin-bottom: var(--space-4);
+}
+
+.auth__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-4);
+}

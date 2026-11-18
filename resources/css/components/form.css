@@ -1,0 +1,137 @@
+/* Formularios: .form, .form__group, .form__label, .form__input, .form__error ... */
+
+/* Separación vertical entre hijos directos (ignora los <input type="hidden"> de @csrf/@method) */
+.form > :not([type='hidden']) ~ :not([type='hidden']) {
+    margin-top: var(--space-4);
+}
+
+.form--roomy > :not([type='hidden']) ~ :not([type='hidden']) {
+    margin-top: var(--space-6);
+}
+
+.form__label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-body);
+}
+
+.form__label--hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    margin-top: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border-input);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    line-height: 1.5rem;
+    color: var(--color-text-input);
+    background-color: var(--color-bg-input);
+    box-shadow: var(--shadow-sm);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.form__input--narrow {
+    width: 75%;
+}
+
+.form__input:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-color: var(--color-focus);
+    box-shadow: 0 0 0 1px var(--color-focus);
+}
+
+.form__input::-webkit-date-and-time-value {
+    min-height: 1.5em;
+    text-align: inherit;
+}
+
+/* Casilla de verificación */
+.form__check {
+    display: inline-flex;
+    align-items: center;
+}
+
+.form__checkbox {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    vertical-align: middle;
+    border: 1px solid var(--color-border-input);
+    border-radius: var(--radius-sm);
+    color: var(--color-checkbox);
+    background-color: var(--color-bg-input);
+    box-shadow: var(--shadow-sm);
+    -webkit-appearance: none;
+    appearance: none;
+    user-select: none;
+}
+
+.form__checkbox:checked {
+    border-color: transparent;
+    background-color: currentColor;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+}
+
+.form__checkbox:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--color-ring-offset), 0 0 0 4px var(--color-focus);
+}
+
+.form__check-text {
+    margin-inline-start: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+/* Mensajes de error de validación */
+.form__error {
+    margin-top: var(--space-2);
+    font-size: var(--font-size-sm);
+    color: var(--color-error-text);
+}
+
+.form__error > * + * {
+    margin-top: var(--space-1);
+}
+
+/* Lista de errores general (encima del formulario) */
+.form__errors {
+    margin-bottom: var(--space-4);
+    padding-inline-start: 1.25rem;
+    list-style: disc;
+    font-size: var(--font-size-sm);
+    color: var(--color-error-text);
+}
+
+/* Fila de acciones (botones y enlaces) */
+.form__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-4);
+}
+
+.form__actions--start {
+    justify-content: flex-start;
+}

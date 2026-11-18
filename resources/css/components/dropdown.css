@@ -1,0 +1,83 @@
+/* Menú desplegable */
+.dropdown {
+    position: relative;
+}
+
+.dropdown__panel {
+    position: absolute;
+    z-index: 50;
+    margin-top: var(--space-2);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.dropdown__panel--w-48 {
+    width: 12rem;
+}
+
+.dropdown__panel--right {
+    inset-inline-end: 0;
+    transform-origin: top right;
+}
+
+.dropdown__panel--left {
+    inset-inline-start: 0;
+    transform-origin: top left;
+}
+
+.dropdown__panel--top {
+    transform-origin: top;
+}
+
+[dir='rtl'] .dropdown__panel--right {
+    transform-origin: top left;
+}
+
+[dir='rtl'] .dropdown__panel--left {
+    transform-origin: top right;
+}
+
+.dropdown__content {
+    padding-block: var(--space-1);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-raised);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.05);
+}
+
+.dropdown__link {
+    display: block;
+    width: 100%;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+    line-height: 1.25rem;
+    text-align: start;
+    color: var(--color-text-body);
+    transition: background-color var(--duration) var(--ease);
+}
+
+.dropdown__link:hover,
+.dropdown__link:focus {
+    outline: none;
+    background-color: var(--color-bg-hover-dropdown);
+}
+
+/* Clases de transición de Alpine (x-transition:*) */
+.dropdown-enter {
+    transition: opacity 200ms ease-out, transform 200ms ease-out;
+}
+
+.dropdown-enter-start,
+.dropdown-leave-end {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.dropdown-enter-end,
+.dropdown-leave-start {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.dropdown-leave {
+    transition: opacity 75ms ease-in, transform 75ms ease-in;
+}

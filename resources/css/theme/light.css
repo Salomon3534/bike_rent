@@ -1,0 +1,67 @@
+/* Tema claro (por defecto): asigna valores a los tokens semánticos */
+:root {
+    color-scheme: light;
+
+    /* Fondos */
+    --color-bg-page: var(--gray-100);
+    --color-bg-surface: #ffffff;
+    --color-bg-raised: #ffffff;
+    --color-bg-input: #ffffff;
+    --color-bg-hover: var(--gray-100);
+    --color-bg-hover-dropdown: var(--gray-100);
+    --color-bg-subtle: var(--gray-50);
+    --color-bg-overlay: var(--gray-500);
+
+    /* Bordes */
+    --color-border-default: var(--gray-200);
+    --color-border-soft: var(--gray-100);
+    --color-border-strong: var(--gray-200);
+    --color-border-input: var(--gray-300);
+    --color-border-button: var(--gray-300);
+    --color-border-hover: var(--gray-300);
+
+    /* Texto */
+    --color-text: var(--gray-900);
+    --color-text-heading: var(--gray-800);
+    --color-text-body: var(--gray-700);
+    --color-text-muted: var(--gray-600);
+    --color-text-subtle: var(--gray-500);
+    --color-text-hover: var(--gray-700);
+    --color-text-input: var(--gray-900);
+    --color-text-icon: var(--gray-400);
+    --color-text-icon-hover: var(--gray-500);
+
+    /* Acento y foco */
+    --color-accent: var(--indigo-600);
+    --color-accent-border: var(--indigo-400);
+    --color-accent-border-focus: var(--indigo-700);
+    --color-focus: var(--indigo-500);
+    --color-ring-offset: #ffffff;
+    --color-checkbox: var(--indigo-600);
+
+    /* Menú responsive: enlace activo */
+    --color-menu-active-text: var(--indigo-700);
+    --color-menu-active-bg: var(--indigo-50);
+    --color-menu-active-focus-text: var(--indigo-800);
+    --color-menu-active-focus-bg: var(--indigo-100);
+    --color-menu-active-focus-border: var(--indigo-700);
+    --color-menu-hover-text: var(--gray-800);
+    --color-menu-hover-bg: var(--gray-50);
+
+    /* Botones */
+    --color-button-primary-bg: var(--gray-800);
+    --color-button-primary-text: #ffffff;
+    --color-button-primary-hover: var(--gray-700);
+    --color-button-primary-active: var(--gray-900);
+    --color-button-secondary-bg: #ffffff;
+    --color-button-secondary-text: var(--gray-700);
+    --color-button-secondary-hover: var(--gray-50);
+
+    /* Estados */
+    --color-success-text: var(--green-600);
+    --color-error-text: var(--red-600);
+    --color-alert-success-bg: var(--green-100);
+    --color-alert-success-text: var(--green-800);
+    --color-alert-error-bg: var(--red-100);
+    --color-alert-error-text: var(--red-800);
+}

@@ -1,0 +1,64 @@
+/* Enlaces de navegación: escritorio (.nav-link) y menú responsive (.menu-link) */
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    padding-inline: var(--space-1);
+    padding-top: var(--space-1);
+    border-bottom: 2px solid transparent;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.25rem;
+    color: var(--color-text-subtle);
+    transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    outline: none;
+    color: var(--color-text-hover);
+    border-bottom-color: var(--color-border-hover);
+}
+
+.nav-link--active,
+.nav-link--active:hover {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent-border);
+}
+
+.nav-link--active:focus {
+    border-bottom-color: var(--color-accent-border-focus);
+}
+
+.menu-link {
+    display: block;
+    width: 100%;
+    padding: var(--space-2) var(--space-4) var(--space-2) var(--space-3);
+    border-left: 4px solid transparent;
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    text-align: start;
+    color: var(--color-text-muted);
+    transition: color var(--duration) var(--ease), background-color var(--duration) var(--ease),
+        border-color var(--duration) var(--ease);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    outline: none;
+    color: var(--color-menu-hover-text);
+    background-color: var(--color-menu-hover-bg);
+    border-left-color: var(--color-border-hover);
+}
+
+.menu-link--active,
+.menu-link--active:hover {
+    color: var(--color-menu-active-text);
+    background-color: var(--color-menu-active-bg);
+    border-left-color: var(--color-accent-border);
+}
+
+.menu-link--active:focus {
+    color: var(--color-menu-active-focus-text);
+    background-color: var(--color-menu-active-focus-bg);
+    border-left-color: var(--color-menu-active-focus-border);
+}

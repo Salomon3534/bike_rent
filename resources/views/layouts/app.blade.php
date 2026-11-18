@@ -14,14 +14,14 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+    <body>
+        <div class="app">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
             @isset($header)
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class="page-header">
+                    <div class="container page-header__inner">
                         {{ $header }}
                     </div>
                 </header>
@@ -29,12 +29,12 @@
 
             <!-- Mensajes flash -->
             @if (session('success') || session('error'))
-                <div class="max-w-7xl mx-auto pt-6 px-4 sm:px-6 lg:px-8">
+                <div class="container app__flash">
                     @if (session('success'))
-                        <div class="p-4 rounded-md bg-green-100 text-green-800">{{ session('success') }}</div>
+                        <div class="alert alert--success">{{ session('success') }}</div>
                     @endif
                     @if (session('error'))
-                        <div class="p-4 rounded-md bg-red-100 text-red-800">{{ session('error') }}</div>
+                        <div class="alert alert--error">{{ session('error') }}</div>
                     @endif
                 </div>
             @endif

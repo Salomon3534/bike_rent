@@ -1,0 +1,70 @@
+/* Tema oscuro: se aplica según la preferencia del sistema (prefers-color-scheme).
+   Debe importarse DESPUÉS de light.css para sobrescribir sus tokens. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+
+        /* Fondos */
+        --color-bg-page: var(--gray-900);
+        --color-bg-surface: var(--gray-800);
+        --color-bg-raised: var(--gray-700);
+        --color-bg-input: var(--gray-900);
+        --color-bg-hover: var(--gray-900);
+        --color-bg-hover-dropdown: var(--gray-800);
+        --color-bg-subtle: var(--gray-700);
+        --color-bg-overlay: var(--gray-900);
+
+        /* Bordes */
+        --color-border-default: var(--gray-700);
+        --color-border-soft: var(--gray-700);
+        --color-border-strong: var(--gray-600);
+        --color-border-input: var(--gray-700);
+        --color-border-button: var(--gray-500);
+        --color-border-hover: var(--gray-700);
+
+        /* Texto */
+        --color-text: var(--gray-100);
+        --color-text-heading: var(--gray-200);
+        --color-text-body: var(--gray-300);
+        --color-text-muted: var(--gray-400);
+        --color-text-subtle: var(--gray-400);
+        --color-text-hover: var(--gray-300);
+        --color-text-input: var(--gray-300);
+        --color-text-icon: var(--gray-500);
+        --color-text-icon-hover: var(--gray-400);
+
+        /* Acento y foco */
+        --color-accent: var(--indigo-400);
+        --color-accent-border: var(--indigo-600);
+        --color-accent-border-focus: var(--indigo-300);
+        --color-focus: var(--indigo-600);
+        --color-ring-offset: var(--gray-800);
+        --color-checkbox: var(--indigo-600);
+
+        /* Menú responsive: enlace activo */
+        --color-menu-active-text: var(--indigo-300);
+        --color-menu-active-bg: rgb(49 46 129 / 0.5);
+        --color-menu-active-focus-text: var(--indigo-100);
+        --color-menu-active-focus-bg: var(--indigo-900);
+        --color-menu-active-focus-border: var(--indigo-300);
+        --color-menu-hover-text: var(--gray-200);
+        --color-menu-hover-bg: var(--gray-700);
+
+        /* Botones */
+        --color-button-primary-bg: var(--gray-200);
+        --color-button-primary-text: var(--gray-800);
+        --color-button-primary-hover: #ffffff;
+        --color-button-primary-active: var(--gray-300);
+        --color-button-secondary-bg: var(--gray-800);
+        --color-button-secondary-text: var(--gray-300);
+        --color-button-secondary-hover: var(--gray-700);
+
+        /* Estados */
+        --color-success-text: var(--green-400);
+        --color-error-text: var(--red-400);
+        --color-alert-success-bg: var(--green-900);
+        --color-alert-success-text: var(--green-200);
+        --color-alert-error-bg: var(--red-900);
+        --color-alert-error-text: var(--red-200);
+    }
+}
